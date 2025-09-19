@@ -1,0 +1,98 @@
+# PPTX日志配置
+# 控制PPTX生成过程中的日志输出级别和内容
+
+# 日志级别控制
+log_levels:
+  # 组件初始化日志
+  component_init: false
+  
+  # 字体计算日志
+  font_calculation: false
+  
+  # 布局管理日志
+  layout_management: false
+  
+  # 内容渲染日志
+  content_rendering: false
+  
+  # 幻灯片构建日志
+  slide_building: false
+  
+  # 文件操作日志
+  file_operations: false
+  
+  # 详细调试日志
+  debug_details: false
+  
+  # 性能统计日志
+  performance_stats: false
+
+# 输出控制
+output_control:
+  # 是否显示进度信息
+  show_progress: false
+  
+  # 是否显示详细的内容分析
+  show_content_analysis: true
+  
+  # 是否显示布局决策过程
+  show_layout_decisions: true
+  
+  # 是否显示字体计算过程
+  show_font_calculations: false
+  
+  # 是否显示图片处理信息
+  show_image_processing: false
+  
+  # 是否显示表格处理信息
+  show_table_processing: false
+  
+  # 是否显示幻灯片构建过程
+  show_slide_creation: true
+  
+  # 是否显示章节处理信息
+  show_chapter_processing: true
+
+# 日志格式
+log_format:
+  # 时间戳格式
+  timestamp_format: "%Y-%m-%d %H:%M:%S"
+  
+  # 是否包含时间戳
+  include_timestamp: false
+  
+  # 是否包含组件名称
+  include_component_name: false
+  
+  # 是否使用颜色输出
+  use_colors: false
+  
+  # 日志前缀
+  prefix: "📊"
+
+# 特定组件的日志控制
+components:
+  font_calculator:
+    show_title_calculation: false
+    show_table_calculation: false
+    show_optimal_calculation: false
+    
+  content_renderer:
+    show_text_rendering: false
+    show_image_rendering: false
+    show_table_rendering: false
+    
+  layout_manager:
+    show_layout_analysis: false
+    show_position_calculation: false
+    show_size_calculation: false
+    
+  slide_builder:
+    show_slide_creation: false
+    show_placeholder_updates: false
+    show_content_addition: false
+    
+  pptx_builder:
+    show_md_parsing: false
+    show_section_processing: false
+    show_final_summary: false

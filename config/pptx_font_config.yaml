@@ -1,0 +1,77 @@
+# 字体配置文件
+# 用于配置PPTX生成中的字体相关设置
+
+# 基础字体设置
+base_font:
+  name: "微软雅黑"  # 默认字体名称
+  fallback: "Arial"  # 备用字体
+
+# 基础字体大小设定（中文友好）
+base_sizes:
+  parent_title: 26    # 父标题（章节分隔页标题）
+  title: 20           # 子章节标题
+  text: 18            # 正文内容（中文友好大小）
+  table_header: 18    # 表格标题（中文友好）
+  table_data: 16      # 表格数据（中文友好）
+  caption: 12         # 图片/表格标题（调整为12pt更清晰）
+
+# 字体大小范围限制
+size_ranges:
+  text: [18, 24]           # 中文正文最小18pt
+  title: [18, 28]
+  parent_title: [22, 32]
+  table_header: [16, 24]
+  table_data: [14, 20]
+  caption: [14, 18]
+  default: [14, 22]
+
+# 字体颜色配置
+colors:
+  title: "#FFFFFF"         # 标题颜色（白色）
+  text: "#444444"          # 正文颜色（深灰色）
+  caption: "#666666"       # 标题颜色（灰色）
+  default: "#000000"       # 默认颜色（黑色）
+
+# 字体样式配置
+styles:
+  title:
+    bold: true
+    italic: false
+  text:
+    bold: true
+    italic: false
+  caption:
+    bold: false
+    italic: false
+
+# 动态调整参数
+dynamic_adjustment:
+  # 根据可用高度调整的倍数
+  height_multipliers:
+    small: 0.75      # 空间很小 (<=1.5英寸)
+    medium: 0.9      # 空间中等 (<=3.0英寸)
+    large: 1.0       # 空间充足 (<=5.0英寸)
+    extra_large: 1.2 # 空间很大 (>5.0英寸)
+  
+  # 根据内容量调整的倍数（仅适用于text类型）
+  content_multipliers:
+    few: 1.2         # 内容很少 (<=2项)
+    normal: 1.0      # 内容适中 (<=5项)
+    many: 0.9        # 内容较多 (<=10项)
+    too_many: 0.8    # 内容很多 (>10项)
+  
+  # 表格字体调整参数
+  table_adjustment:
+    cell_height_ratio: 0.6    # 单元格高度中用于文字的比例
+    base_size_multiplier: 1.0 # 基础大小倍数（调整为1.0避免字体过大）
+    col_adjustments:
+      normal: 1.0             # 正常列数 (<=3列)
+      many: 0.9               # 较多列数 (<=5列)
+      too_many: 0.8           # 太多列数 (>5列)
+
+# 文本估算参数
+text_estimation:
+  line_height_ratio: 1.2      # 行高与字体大小的比例
+  gap_list: 6                 # 列表项段后距（pt）
+  gap_paragraph: 8            # 段落段后距（pt）
+  min_chars_per_line: 8       # 每行最少字符数

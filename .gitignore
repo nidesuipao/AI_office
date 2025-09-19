@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# Local data/output
+output_file/
+
+# Docker runtime data and credentials
+# 如果这些是示例数据且需要版本控制，请移除这些忽略项
+docker/data/
+docker/credentials.json
+
+# Generated artifacts
+*.pptx
+*.docx
+
+# Cache
+*.cache/
+.cache/
+**/.pytest_cache/
+.pytest_cache/
+
+# Logs
+*.log

@@ -1,0 +1,129 @@
+# DOCX 样式配置文件
+# 用于配置 Word 文档生成中的样式相关设置
+
+# 默认样式设置
+default_styles:
+  font:
+    western: "Times New Roman"
+    east_asian: "宋体"
+    size: 12
+    color: "#000000"
+  paragraph:
+    line_spacing: 1.15
+    space_before: 0
+    space_after: 0
+
+# 标题样式配置
+headings:
+  h1:
+    font:
+      western: "Times New Roman"
+      east_asian: "宋体"
+      size: 16
+      bold: false
+      color: "#000000"
+    paragraph:
+      alignment: "center"
+      line_spacing: 1.5
+      space_before: 0
+      space_after: 0
+  
+  h2:
+    font:
+      western: "Times New Roman"
+      east_asian: "宋体"
+      size: 14
+      bold: true
+      color: "#000000"
+    numbering:
+      format: "%1"
+    paragraph:
+      alignment: "left"
+      space_before: 0
+      space_after: 0
+  
+  h3:
+    font:
+      western: "Arial"
+      east_asian: "黑体"
+      size: 13
+      bold: true
+      color: "#000000"
+    numbering:
+      format: "%1.%2"
+
+# 文本样式配置
+text_styles:
+  normal:
+    font:
+      western: "Times New Roman"
+      east_asian: "宋体"
+      size: 12
+  
+  bold:
+    font:
+      bold: true
+  
+  italic:
+    font:
+      italic: true
+  
+  code:
+    font:
+      western: "Courier New"
+      size: 11
+      color: "#333333"
+    paragraph:
+      background: "#F5F5F5"
+
+# 列表样式配置
+lists:
+  unordered:
+    style: "List Bullet"
+    bullet_char: "•"
+    font:
+      size: 12
+  
+  ordered:
+    style: "List Number"
+    font:
+      size: 12
+
+# 表格样式配置
+tables:
+  default:
+    style: "Table Grid"
+    alignment: "center"
+    font:
+      size: 11
+    column_widths:
+      default: 1.5
+      unit: "inches"
+
+# 页面布局配置
+page_layout:
+  margins:
+    top: 1.0
+    bottom: 1.0
+    left: 1.25
+    right: 1.25
+    unit: "inches"
+  orientation: "portrait"
+
+# 图片样式配置
+images:
+  default:
+    alignment: "center"  # left, center, right
+    width: 4.0           # 图片宽度（英寸）
+    height: auto         # auto 或具体数值（英寸）
+    space_before: 12     # 图片前间距（磅）
+    space_after: 12      # 图片后间距（磅）
+    caption_style:
+      font:
+        size: 10
+        italic: true
+        color: "#666666"
+      paragraph:
+        alignment: "center"
+        space_before: 6
+        space_after: 18
